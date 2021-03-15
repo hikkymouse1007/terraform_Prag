@@ -61,3 +61,11 @@ variable "AWS_REGION" {
 }
 ---
 ```
+
+3.4.2条件分岐
+環境変数によってデプロイするデータを変更可能
+
+```
+terraform plan -var 'env=prod'
+terraform plan -var 'env=dev'
+```
