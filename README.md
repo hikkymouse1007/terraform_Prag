@@ -69,3 +69,31 @@ variable "AWS_REGION" {
 terraform plan -var 'env=prod'
 terraform plan -var 'env=dev'
 ```
+
+3.7.2 module
+
+```
+├── http_server
+│ └── main.tf (module)
+└── main.tf (file using module)
+```
+
+terraform getを実行するとmodules.jsonが作成される
+
+```
+$terraform get
+
+.
+├── .terraform
+│   └── modules
+│       └── modules.json
+├── http_server
+│   └── main.tf
+├── main.tf
+├── provider.tf
+├── terraform.tfstate
+├── terraform.tfstate.backup
+├── terraform.tfvars
+├── vars.tf
+└── version.tf
+```
