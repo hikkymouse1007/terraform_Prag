@@ -1,2 +1,2 @@
 vars:
-	cp ./params/* 7.10/
+	cp ./params/* 8.1/
